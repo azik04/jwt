@@ -8,7 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCors();
 
 // Configure the DbContext
-builder.Services.AddDbContext<UserContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
+builder.Services.AddDbContext<UserContext>(opt => 
+    opt.UseInMemoryDatabase("Test"));
 
 // Configure Swagger
 builder.Services.AddControllers();

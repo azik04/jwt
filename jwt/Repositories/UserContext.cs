@@ -16,18 +16,5 @@ public UserContext(DbContextOptions<UserContext> options) : base(options)
         {
         modelBuilder.Entity<User>(entity => { entity.HasIndex(e => e.Phone).IsUnique(); });
     }
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            CreateHostBuilder(args).Build().Run();
-        }
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
-    }
 }    

@@ -6,7 +6,7 @@ namespace jwt.Helpers;
 
 public class JwtService
 {
-    private string secureKey = "this is a very secure key";
+    private string secureKey = "5227E67E-3DA3-4033-A296-47528D53EAE3";
 
     public string Generate(int id)
     {
